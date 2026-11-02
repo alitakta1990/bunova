@@ -1,0 +1,302 @@
+
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BUNOVA | برگر متفاوت</title>
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  background:#101010;
+  color:#fff;
+  font-family:Tahoma,Arial,sans-serif;
+  line-height:1.8;
+}
+header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:18px 7%;
+  border-bottom:1px solid #292929;
+  position:sticky;
+  top:0;
+  background:#101010ee;
+  z-index:10;
+}
+.logo{
+  font-size:27px;
+  font-weight:900;
+  color:#ff7626;
+  letter-spacing:2px;
+}
+.cart{
+  background:#ff7626;
+  color:#111;
+  border:0;
+  border-radius:30px;
+  padding:10px 17px;
+  font-weight:bold;
+}
+.hero{
+  padding:75px 7% 65px;
+  background:
+  radial-gradient(ellipse at 15% 45%,#71300d 0%,transparent 45%),
+  linear-gradient(120deg,#171717,#101010);
+  text-align:center;
+}
+.tag{
+  display:inline-block;
+  color:#ff9b59;
+  border:1px solid #743a1b;
+  padding:5px 15px;
+  border-radius:30px;
+  font-size:13px;
+}
+.hero h1{
+  font-size:clamp(36px,8vw,65px);
+  line-height:1.5;
+  margin:18px 0;
+  font-weight:900;
+}
+.hero h1 span{color:#ff7626}
+.hero p{color:#bbb;font-size:15px}
+.hero button{
+  margin-top:25px;
+  background:#ff7626;
+  border:0;
+  padding:14px 30px;
+  border-radius:12px;
+  font-size:16px;
+  font-weight:bold;
+  cursor:pointer;
+}
+.section{padding:50px 7%}
+.section-title{
+  font-size:27px;
+  margin-bottom:8px;
+}
+.section-sub{color:#999;margin-bottom:25px}
+.menu{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:20px;
+}
+.product{
+  background:#1b1b1b;
+  border:1px solid #303030;
+  border-radius:18px;
+  overflow:hidden;
+  transition:.25s;
+}
+.product:hover{
+  transform:translateY(-6px);
+  border-color:#ff7626;
+}
+.food-art{
+  height:155px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-size:83px;
+  background:radial-gradient(circle,#593016,#25201d 65%,#1b1b1b);
+}
+.product-info{padding:18px}
+.product h3{font-size:19px;margin-bottom:7px}
+.product p{color:#aaa;font-size:13px;min-height:45px}
+.price{
+  color:#ff8a45;
+  font-weight:bold;
+  font-size:18px;
+  margin:12px 0;
+}
+.add{
+  width:100%;
+  background:#ff7626;
+  color:#111;
+  border:0;
+  border-radius:10px;
+  padding:11px;
+  font-size:15px;
+  font-weight:bold;
+  cursor:pointer;
+}
+.add:active{transform:scale(.97)}
+.cart-box{
+  margin:10px 7% 50px;
+  padding:22px;
+  background:#1b1b1b;
+  border:1px solid #343434;
+  border-radius:18px;
+}
+.cart-box h2{color:#ff8a45;margin-bottom:12px}
+.cart-item{
+  display:flex;
+  justify-content:space-between;
+  gap:10px;
+  padding:10px 0;
+  border-bottom:1px solid #333;
+  font-size:14px;
+}
+.remove{
+  background:#3a2020;
+  color:#ff8a8a;
+  border:0;
+  border-radius:7px;
+  padding:4px 9px;
+}
+.total{
+  display:flex;
+  justify-content:space-between;
+  margin-top:18px;
+  font-size:18px;
+  font-weight:bold;
+}
+.checkout{
+  width:100%;
+  margin-top:17px;
+  background:#ff7626;
+  border:0;
+  border-radius:10px;
+  padding:13px;
+  font-size:16px;
+  font-weight:bold;
+}
+footer{
+  text-align:center;
+  padding:25px;
+  border-top:1px solid #292929;
+  color:#888;
+  font-size:13px;
+}
+footer strong{color:#ff7626}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">BUNOVA.</div>
+  <button class="cart" onclick="document.getElementById('basket').scrollIntoView({behavior:'smooth'})">
+    🛒 سبد خرید <span id="count">۰</span>
+  </button>
+</header>
+
+<section class="hero">
+  <span class="tag">طعم متفاوت، تجربه متفاوت</span>
+  <h1>یه گاز بزن...<br><span>عاشقش می‌شی!</span></h1>
+  <p>برگرهای خوشمزه برای لحظه‌هایی که فقط یه طعم خاص می‌چسبه.</p>
+  <button onclick="document.getElementById('menu').scrollIntoView({behavior:'smooth'})">
+    دیدن منو ↓
+  </button>
+</section>
+
+<section class="section" id="menu">
+  <h2 class="section-title">🔥 منوی محبوب‌ها</h2>
+  <p class="section-sub">انتخاب کن، سفارش بده، لذت ببر!</p>
+
+  <div class="menu">
+
+    <div class="product">
+      <div class="food-art">🍔</div>
+      <div class="product-info">
+        <h3>کلاسیک برگر</h3>
+        <p>برگر خوش‌طعم با ترکیب سس مخصوص و مخلفات تازه.</p>
+        <div class="price">۲۵۰,۰۰۰ تومان</div>
+        <button class="add" onclick="add(0)">افزودن به سبد +</button>
+      </div>
+    </div>
+
+    <div class="product">
+      <div class="food-art">🍔</div>
+      <div class="product-info">
+        <h3>چیز برگر</h3>
+        <p>ترکیب برگر و پنیر با طعمی که فراموش نمی‌کنی.</p>
+        <div class="price">۲۹۰,۰۰۰ تومان</div>
+        <button class="add" onclick="add(1)">افزودن به سبد +</button>
+      </div>
+    </div>
+
+    <div class="product">
+      <div class="food-art">🍔</div>
+      <div class="product-info">
+        <h3>دبل برگر</h3>
+        <p>دو لایه برگر برای طرفدارهای طعم قوی و خاص.</p>
+        <div class="price">۳۵۰,۰۰۰ تومان</div>
+        <button class="add" onclick="add(2)">افزودن به سبد +</button>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="cart-box" id="basket">
+  <h2>🛒 سبد خرید شما</h2>
+  <div id="items">هنوز محصولی انتخاب نکردی.</div>
+  <div class="total">
+    <span>مبلغ کل:</span>
+    <span id="total">۰ تومان</span>
+  </div>
+  <button class="checkout" onclick="checkout()">ثبت سفارش</button>
+</section>
+
+<footer>
+  <strong>BUNOVA.</strong>
+  <p>طعم خوب، حال خوب ❤️</p>
+  <p>© تمامی حقوق محفوظ است.</p>
+</footer>
+
+<script>
+const products=[
+  {name:"کلاسیک برگر",price:250000,qty:0},
+  {name:"چیز برگر",price:290000,qty:0},
+  {name:"دبل برگر",price:350000,qty:0}
+];
+
+const money=n=>n.toLocaleString("fa-IR")+" تومان";
+
+function add(i){
+  products[i].qty++;
+  render();
+}
+
+function removeItem(i){
+  if(products[i].qty>0) products[i].qty--;
+  render();
+}
+
+function render(){
+  let count=0,total=0,html="";
+
+  products.forEach((p,i)=>{
+    count+=p.qty;
+    total+=p.qty*p.price;
+
+    if(p.qty>0){
+      html+=`
+      <div class="cart-item">
+        <span>${p.name} × ${p.qty}</span>
+        <span>${money(p.qty*p.price)}</span>
+        <button class="remove" onclick="removeItem(${i})">حذف</button>
+      </div>`;
+    }
+  });
+
+  document.getElementById("count").innerText=count.toLocaleString("fa-IR");
+  document.getElementById("items").innerHTML=html||"هنوز محصولی انتخاب نکردی.";
+  document.getElementById("total").innerText=money(total);
+}
+
+function checkout(){
+  let count=products.reduce((sum,p)=>sum+p.qty,0);
+  if(count===0){
+    alert("اول یه محصول انتخاب کن!");
+    return;
+  }
+  alert("این نسخه نمایشی است؛ برای دریافت سفارش واقعی باید سیستم ثبت سفارش و اطلاعات تماس فروشگاه اضافه شود.");
+}
+</script>
+
+</body>
+</html>
